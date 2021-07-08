@@ -1,0 +1,17 @@
+---
+layout: default
+title : Photos
+---
+<script type="text/javascript">
+      $(document).ready(function () {
+        $("#galerie").justifiedGallery({});          
+      })
+</script>        
+{% assign image_files = site.static_files | where: "photo_qc", true %}
+<div id="galerie">
+{% for myimage in image_files %}
+  <a href="/assets/photos/qc/{{ myimage.name }}" data-lightbox="{{ myimage.name }}">
+    <img src="/assets/photos/qc_thumbs/{{ myimage.name }}"/>
+  </a>
+{% endfor %}
+</div>

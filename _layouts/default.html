@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>École d'été en écologie aquatique (ÉÉÉA) - {{ page.title }}</title>  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  
+  <link rel="stylesheet" href="/assets/css/justifiedGallery.min.css" />
+  <script src="/assets/js/jquery.justifiedGallery.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/lightbox.min.css" />
+  <script src="/assets/js/lightbox.min.js"></script>
+  
+  <script type="text/javascript">
+        
+      $(document).ready(function () {
+        
+        // navig de gauche
+        
+        // https://stackoverflow.com/questions/25316889/highlight-active-menu-item-using-jquery/41414686
+        var url = window.location.href;
+        $('nav a').filter(function() {
+            return this.href == url;
+        }).addClass('selected');
+        
+        if (url.includes("/qc/")) {
+          $("#boite_quebec a").addClass("selected")
+        }
+        
+        if (url.includes("/sa/")) {
+          $("#boite_savoie a").addClass("selected")
+        }
+        
+      })
+  </script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin : 0;
+      padding: 0;
+      background-color:#b1bcd2;
+      color: #1d211c;
+      font-size:16px;
+    }
+    a, a:visited {
+      color: #4773BE;
+      text-decoration:none;
+    }
+
+    a:hover {
+      text-decoration:underline;
+    }
+    h1 {
+      font-size:1.5em;
+    }
+
+    #container_blanc {
+      background-color:white;
+      margin-right:20px;
+      margin-left:20px;
+      border-right: 0.1px solid #1d212c;
+      border-left: 0.1px solid #1d212c;
+      border-bottom: 0.1px solid #1d212c;
+      padding:0;
+      box-shadow:5px 5px 5px;
+    }
+    
+    footer {
+      width:100%;
+
+      clear:both;
+    }
+
+    main {
+      padding:0px 20px 20px 10px;
+      min-height:300px;
+    }
+
+    #container_footer {
+      padding:20px;
+      text-align:center;
+    }
+    
+    #column_container {
+     display:flex;
+    }
+    nav {
+      flex: 0 0 175px;
+    }
+    main {
+      flex: 1;
+    }
+    
+
+    nav a,nav a:hover,nav a:visited {
+      display:block;
+      padding:10px;
+      text-decoration:none;
+      background:#4773be;
+      color:white;
+      border-bottom:0;
+    }
+        
+    nav a:hover, nav a.selected {
+      background:#71b441;      
+    }
+    nav {
+      margin-right:20px;
+      border:1px solid #1d212c;      
+      margin-left:20px;
+      margin-bottom:20px;
+      background-color:#b1bcd2;
+    }
+    
+    h1 {
+      margin-top:5px;
+      font-size:1.5em;
+    }
+    h2 {
+      font-size:1.1em;
+    }
+
+    header {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size:4em;
+      padding:10px;
+      text-align:center;
+    }
+    header a,header a:hover{
+      text-decoration:none;
+    }
+    footer a {
+      display:inline-block;
+      margin-right:30px;
+      margin-left:30px;
+    }
+    footer a img {
+      height:40px;
+    }
+
+    #volets {
+      display:flex;
+    }
+    #volets a {
+      text-shadow: 2px 2px 0 #000;          
+      display:block;
+      /*font-weight:bold;*/
+      color:white;
+      font-size:0.8em;    
+      padding-top:40px;
+      padding-bottom:40px;     
+      
+      background: rgba(0, 0, 0, 0.2); 
+    }
+    
+    #volets a:hover {
+      color:#71b441;
+      
+    }
+        
+    .boite_volet {
+      flex:1;
+      background-image:url("/assets/photos/qc/IMG_2949.JPG");
+      border: 1px solid black;
+      background-size: 100%;
+      background-position:center;
+      background-repeat: no-repeat;      
+    }
+    
+    #boite_savoie {
+      background-image:url("/assets/photos/sa/IMG_20190705_122802.jpg");
+    }
+    
+    #boite_quebec a.selected, #boite_savoie a.selected {
+      color:#71b441;
+    }
+
+    .boite_volet:first-child {
+      margin-right:5px;
+      margin-left:10px;
+    }
+
+    .boite_volet:last-child {
+      margin-left:5px;      
+      margin-right:10px;
+    }
+
+        
+  </style>
+</head>
+<body>
+  <div id="container_blanc">
+    <header>
+      <a href="/">École d'été en écologie aquatique</a><br />
+      <div id="volets">
+        <div class="boite_volet" id="boite_quebec">
+          <a href="/qc/presentation">Volet Québec</a>
+        </div>
+        <div class="boite_volet" id="boite_savoie">
+          <a href="/sa/presentation">Volet Savoie</a>
+        </div>
+    </div>
+    </header>
+    <div id="column_container">
+      <nav>  
+        {% if  page.url contains '/sa/' %}
+          <a href="#">Sections à venir</a>          
+        {% else %}
+          <a href="/qc/presentation">Présentation</a>
+          <a href="/qc/objectifs">Objectifs</a>
+          <a href="/qc/public">Public cible</a>
+          <a href="/qc/contenu">Contenu et organisation de la semaine</a>
+          <a href="/qc/modalites">Modalités d'inscription et coût de participation</a>
+          <a href="/qc/dates">Dates importantes</a>
+          <a href="/qc/photos">Photos</a>
+        {% endif %}
+      </nav>
+      <main>
+        <h1>{{ page.title }}</h1>
+        	{{ content }}
+      </main>
+    </div>
+    <footer>
+      <div id="container_footer">
+        <a href="https://www.uqtr.ca" target="_blank">
+          <img src="/assets/images/uqtr.jpg">
+        </a> 
+        <a href="https://www.univ-smb.fr/" target="_blank">
+          <img src="/assets/images/savoie.png">
+        </a>
+        <a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=2137" target="_blank">
+          <img src="/assets/images/rive.png">
+        </a>
+        
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

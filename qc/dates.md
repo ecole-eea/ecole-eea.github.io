@@ -8,6 +8,6 @@ title : Dates importantes
 
 10 février : Demande de visas de séjour envoyées par les étudiants
 
-20 mai : début du cours
+20 mai : Début du cours
 
-28 mai : fin du cours
+28 mai : Fin du cours

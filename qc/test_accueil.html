@@ -28,7 +28,12 @@ title : Accueil
       background-image: url(/assets/photos/accueil/france.jpg);
       background-repeat: no-repeat;
       background-size:cover; 
-      width:50%;     
+      clip-path:polygon(
+        0 0, /* top left */
+        40% 0, /* top right */
+        60% 100%, /* bottom right */
+        0 100% /* bottom left */
+      );
     }
   </style>
 </head>

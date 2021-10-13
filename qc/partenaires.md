@@ -32,7 +32,7 @@ title : Partenaires
 
 <div class="grid">
   <div><img class="partenaire" src = "/assets/images/uqtr.jpg"/></div>
-  <div><img class="partenaire" src = "/assets/images/rive.png"/></div>
+  <div><img class="partenaire" src = "/assets/images/savoie.png"/></div>
 </div>
 
 

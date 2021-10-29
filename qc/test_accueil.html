@@ -38,6 +38,7 @@ title : Accueil
       background-position:left;
     }
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans&display=swap');
     #ecole {
       font-family: 'Bebas Neue', sans-serif;
       position:absolute;
@@ -49,10 +50,32 @@ title : Accueil
       background-color:#4773be;
       text-align:center;
       padding:1%;
-      padding-top:3%;
+      padding-top:4%;
       border-radius:5%;
       border: 0.5px solid black;
       color:white;
+    }
+    .textes {
+      position:absolute;
+    }
+    #texte_quebec {
+      left:70%;
+      top:30%;
+    }    
+    #texte_france {
+      left:15%;
+      top:70%;
+    }        
+    .textes a {
+      color:white;
+      text-decoration:none;
+      font-size:3vw;
+      font-family: 'Open Sans', sans-serif;
+      font-weight:bold;
+      text-shadow: 2px 2px black;
+    }
+    .textes a:hover {
+      color:#71b441;
     }
   </style>
 </head>
@@ -61,4 +84,10 @@ title : Accueil
 </body>
 <div id="fond_france"></div>
 <div id="ecole">École d'été en écologie aquatique</div>
+<div id="texte_france" class="textes">
+  <a href="/sa/presentation">France<br/>À venir en 2023</a>
+</div>
+<div id="texte_quebec" class="textes"><a href="/qc/presentation">
+  Québec<br />À venir en 2022
+</a></div>
 </html>

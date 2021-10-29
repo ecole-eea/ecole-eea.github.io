@@ -17,15 +17,16 @@ title : Accueil
       background-color:#b1bcd2;
       color: #1d211c;
       font-size:16px;      
-      
-      height: 100vh;
       background-image: url(/assets/photos/accueil/qc.jpg);
+      height: 100vh;
       background-repeat: no-repeat;
-      background-size:cover;       
+      background-size:cover;
+      background-position:bottom;
     }
     #fond_france {
       height: 100vh;
-      background-image: url(/assets/photos/accueil/france.jpg);
+
+      background-image: url(/assets/photos/accueil/france.jpg);            
       background-repeat: no-repeat;
       background-size:cover; 
       clip-path:polygon(
@@ -34,10 +35,30 @@ title : Accueil
         60% 100%, /* bottom right */
         0 100% /* bottom left */
       );
+      background-position:left;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    #ecole {
+      font-family: 'Bebas Neue', sans-serif;
+      position:absolute;
+      top:40%;
+      left:40%;
+      font-size:3vw;
+      width:20%;
+      height:20%;
+      background-color:#4773be;
+      text-align:center;
+      padding:1%;
+      padding-top:3%;
+      border-radius:5%;
+      border: 0.5px solid black;
+      color:white;
     }
   </style>
 </head>
 <body>
-  <div id="fond_france"></div>
+  
 </body>
+<div id="fond_france"></div>
+<div id="ecole">École d'été en écologie aquatique</div>
 </html>
